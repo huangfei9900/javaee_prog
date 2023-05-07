@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+
+        http://www.springframework.org/schema/aop/spring-aop.xsd" >
+   <bean name="userDao" class="com.dao.UserDaoImpl"/>
+  <!-- <bean id="userService" class="com.service.UserServiceImpl"  >
+      &lt;!&ndash; 如何实现注入setter方法注入&ndash;&gt;
+      <property name="userDao" ref="userDao"/>
+   </bean>-->
+   <bean name="AnnoAdvice" class="com.dao.AnnoAdvice"/>
+    <aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
+
+
+</beans>

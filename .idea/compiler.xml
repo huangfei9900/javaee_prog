@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springMVC-learn" />
+        <module name="SpringMvc_chap10" />
+        <module name="springmvcrespond" />
+        <module name="Test" />
+        <module name="springmvcresponse" />
+        <module name="spring1" />
+        <module name="MyBatishf" />
+        <module name="MyBatis" />
+        <module name="myssm" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="hh" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.UserMapper">
+
+    <select id="getUserPassword" resultType="User">
+        select password from user
+        <where>
+            <if test="name != null and name != '' ">
+                and name = #{name}
+            </if>
+        </where>
+    </select>
+    <select id="getUserName" resultType="User">
+        select name from user
+        <where>
+            <if test="password != null and password != '' ">
+                and password = #{password}
+            </if>
+        </where>
+    </select>
+
+</mapper>

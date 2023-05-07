@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.UserDao">
+    <select id="getAll" resultType="com.pojo.User">
+        select * from db.user
+    </select>
+
+    <insert id="save" >
+        insert into db.user(id,name,type,discription) values (#{id},#{name},#{type},#{discription})
+    </insert>
+
+    <update id="update">
+        update db.user set name=#{name},type=#{type},discription=#{discription} where id= #{id}
+    </update>
+
+    <delete id="delete">
+        delete from db.user where id = #{id}
+    </delete>
+</mapper>
