@@ -5,7 +5,7 @@
 <mapper namespace="com.mapper.UserMapper">
 
     <select id="getUserPassword" resultType="User">
-        select password from user
+        select password from book
         <where>
             <if test="name != null and name != '' ">
                 and name = #{name}
@@ -13,7 +13,7 @@
         </where>
     </select>
     <select id="getUserName" resultType="User">
-        select name from user
+        select name from book
         <where>
             <if test="password != null and password != '' ">
                 and password = #{password}
